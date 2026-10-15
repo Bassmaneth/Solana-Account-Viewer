@@ -1,3 +1,4 @@
+import './style.css';
 import { Connection, PublicKey, LAMPORTS_PER_SOL } from "@solana/web3.js";
 
 const connection = new Connection("https://api.devnet.solana.com", "confirmed");

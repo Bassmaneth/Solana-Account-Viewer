@@ -2,5 +2,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/solana-account-viewer/',
+  base: '/Solana-Account-Viewer//',
 });

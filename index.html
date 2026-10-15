@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8fafc" />
+  <meta name="description" content="Check multiple Solana wallet balances on Devnet." />
+  <title>Solana Account Viewer</title>
+  <link rel="icon" type="image/png" href="%BASE_URL%solana-logo.png" />
+  <link rel="stylesheet" href="/style.css" />
+  <script type="module" src="/main.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="brand">
+        <img
+  class="brand-logo"
+  src="%BASE_URL%solana-logo.png"
+  alt="Solana logo"
+/>
+          <h1>Solana Account Viewer</h1>
+          <p class="subtitle">A simple way to check wallet balances.</p>
+        </div>
+      </div>
+      <span class="network"><span class="dot"></span> Devnet</span>
+    </header>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <h2>Check wallet balances</h2>
+          <p>Enter one or more public addresses, one per line.</p>
+        </div>
+      </div>
+
+      <form id="balance-form">
+        <label for="addresses">Solana wallet addresses</label>
+        <textarea
+          id="addresses"
+          placeholder="Paste wallet addresses here&#10;One address per line"
+          spellcheck="false"
+          required
+        ></textarea>
+
+        <div class="form-footer">
+          <span class="hint">Public addresses only. Never enter private keys.</span>
+          <button id="check-button" type="submit">Check balances <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel results-panel">
+      <div class="results-heading">
+        <div>
+          <h2>Results</h2>
+          <p id="result-count">Your wallet balances will appear here.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Wallet address</th>
+              <th scope="col">Balance</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="results-body">
+            <tr>
+              <td colspan="3" class="empty">
+                No results yet. Enter an address above to get started.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <span>Built for learning Solana development.</span>
+      <span>Solana Devnet · Read-only</span>
+    </footer>
+  </main>
+</body>
+</html>
